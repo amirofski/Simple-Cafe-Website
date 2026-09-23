@@ -1,0 +1,73 @@
+@import "tailwindcss";
+
+:root {
+  --paper: #F2EEE6;
+  --espresso: #211B16;
+  --coffee: #5A4638;
+  --sage: #6D7560;
+  --warm-white: #FAF8F3;
+  --muted: #8C857B;
+  --hairline: rgba(33, 27, 22, 0.12);
+  --hairline-light: rgba(250, 248, 243, 0.15);
+}
+
+body {
+  background-color: var(--paper);
+  color: var(--espresso);
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  overflow-x: hidden;
+}
+
+.font-serif {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+}
+
+.font-sans {
+  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+}
+
+/* Lenis Recommended Styles */
+html.lenis, html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-scrolling iframe {
+  pointer-events: none;
+}
+
+/* Editorial line masking & utility */
+.mask-line-wrapper {
+  overflow: hidden;
+  display: block;
+}
+
+/* Smooth transitions */
+.transition-editorial {
+  transition: all 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Custom scrollbar subtle track */
+::-webkit-scrollbar {
+  width: 5px;
+}
+::-webkit-scrollbar-track {
+  background: var(--paper);
+}
+::-webkit-scrollbar-thumb {
+  background: #D8D2C5;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--muted);
+}
